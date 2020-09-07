@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Order</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Product name</th>
+				<th>Product quantity</th>
+				<th>Cost</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in cart %}
+				<tr>
+					<td>{{item.product.name}} x</td>
+					<td>{{item.quantity}}</td>
+					<td>{{item.total_price}}</td>
+				</tr>
+			{% endfor %}
+				<tr>
+					<td>Total price: {{cart.get_total_price}}</td>
+				</tr>
+		</tbody>
+	</table>
+
+	<form action="{% url 'order:create_order' %}" method="post">
+		{{order_form.as_p}}
+		{% csrf_token %}
+		<input type="submit" value="Get order">
+	</form>
+</body>
+</html>
+
