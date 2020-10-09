@@ -1,4 +1,3 @@
-/* Style off */
 body{
 	margin: 0;
 
@@ -11,9 +10,9 @@ body{
 *,
 *:before,
 *:after {
-	box-sizing: border-box; /* -Меняет алгоритм подсчета блоков */
+	box-sizing: border-box; /*Меняет алгоритм подсчета блоков*/
 }
-a {
+a, a:hover, a:active, a:focus{
 	text-decoration: none;
 	outline: none;
 }
@@ -140,7 +139,7 @@ li{
     transform: rotate(45deg);
 }
 
-/* arrow-next */
+/* arrow-next  */
 .arrow-next {
 	cursor: pointer;
 	position: relative;
@@ -510,17 +509,6 @@ li{
 	position: relative;
 	background-color: #69301d;
 }
-	.slide__name{
-		position: absolute;
-		top: 50%;
-		left: 35%;
-		z-index: 0;
-		transform: translateY(-50%);	
-
-		font-size: 700%;/*100px*/
-		font-weight: 700;
-		color: #5b220f;
-	}
 
 .testimonials__title{
 	width: 100%;
@@ -532,11 +520,26 @@ li{
 		color: #fb602a;
 	}
 
-.slide{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.slider{
+	height: 230px;
 }
+	.slide{
+		display: none;
+		height: 200px;
+		justify-content: center;
+		align-items: center;
+	}
+	.slide__name{
+		position: absolute;
+		top: 50%;
+		left: 35%;
+		z-index: 0;
+		transform: translateY(-50%);	
+
+		font-size: 700%;/*100px*/
+		font-weight: 700;
+		color: #5b220f;
+	}
 	.slide__text{
 		width: 24%;
 		padding-right: 40px;
@@ -545,8 +548,9 @@ li{
 		text-align: center;
 		line-height: 1.8;
 	}
-	.testimonials__img{
+	.slide__img{
 		z-index: 1;
+		height: inherit;
 	}
 	.slide__city{
 		padding-top: 5px;
@@ -729,24 +733,15 @@ li{
 
 
 /* Media */
-@media(max-width: 1300px){
-	.site-title{
-		position: relative;
-		left: auto;
-		transform: translateX(0);
-	}
-}
-/*@media(max-width: 960px){
-
-}*/
-@media(max-width: 767px){ /* less than ipad  */
+@media(max-width: 767px){
 	.btn{
 		padding: 5px 20px;
 	}
 
 	/* Header */
 	.header{
-		padding: 30px 20px 10px 20px;
+		height: 67px;
+		padding: 10px 20px 10px 20px;
 	}
 	.header__nav{
 		display: none;
@@ -776,6 +771,10 @@ li{
 		margin: 0 5px;
 	}
 
+	.site-title{
+		align-items: center;
+	}
+
 	/* About */
 	.about__inner{
 		width: 100%;
@@ -800,6 +799,7 @@ li{
 	.awesome__img img{
 		top: 0;
 		left: 25px;
+		z-index: 1;
 	}
 	.awesome__description{
 		text-align: right;
@@ -918,8 +918,9 @@ li{
 	}
 }
 
-
-
+.active{
+	display: flex;
+}
 
 
 

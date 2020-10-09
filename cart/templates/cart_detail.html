@@ -1,8 +1,20 @@
 {% extends 'cart/base.html' %}
 {% load static %}
 
+{% block link %}
+	<link rel="stylesheet" href="{% static 'css/cart_style.css' %}">
+{% endblock %}
+
 {% block title %}Cart{% endblock %}
+
 {% block body %}
+	<div class="site-title">
+		<a class="site-title__wrap" href="{% url 'shop' %}">
+			<b class="organic">Organic</b>
+			<span class="fresh-foods">fresh foods</span>
+		</a>
+	</div>
+
 	<table>
 		<thead>
 			<tr>

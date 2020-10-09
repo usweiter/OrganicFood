@@ -1,0 +1,46 @@
+
+/* Style off */
+body{
+	margin: 0;
+
+	background-color: #0ba569;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box; /* -Меняет алгоритм подсчета блоков */
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+}
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+p{
+	margin: 0 0 10px 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style-type: none;
+}
+
+.site-title__wrap{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.organic{
+	font-size: 35px;
+}

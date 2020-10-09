@@ -26,12 +26,12 @@
 
 				<nav class="header__nav">
 					<ul class="header__ul">
-						<li><a href="#intro">Home</a></li>
-						<li><a href="#shop">Shop</a></li>
-						<li><a href="#story">Story</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#blog">Blog</a></li>
-						<li><a href="#testimonials">Testimonials</a></li>
+						<li><a class="nav__link" href="#intro">Home</a></li>
+						<li><a class="nav__link" href="#shop">Shop</a></li>
+						<li><a class="nav__link" href="#story">Story</a></li>
+						<li><a class="nav__link" href="#about">About</a></li>
+						<li><a class="nav__link" href="#blog">Blog</a></li>
+						<li><a class="nav__link" href="#testimonials">Testimonials</a></li>
 					</ul>
 				</nav>
 				
@@ -52,8 +52,8 @@
 
 				<!--Hidden on desktop-->
 				<div class="instruments-mobile">
-					<span class="instruments__summ">0.0$</span>
-					<a class="instruments__item instruments--basket" href="#"><div class="basket__counter">0</div><svg class="favicon basket"><use xlink:href="#basket"></use></svg></a>
+					<span class="instruments__summ">{{cart.get_total_price}}$</span>
+					<a class="instruments__item instruments--basket" href="{% url 'cart:cart_detail' %}"><div class="basket__counter">{{cart|length}}</div><svg class="favicon basket"><use xlink:href="#basket"></use></svg></a>
 				</div>
 				<!---->
 			</header>
@@ -162,13 +162,17 @@
 					<div class="slide active">
 						<span class="slide__name">Sarah A</span>
 						<div class="slide__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."<p class="slide__city">-from Santa Monica, CA</p></div>
-						<img class="slide__img" src="{% static 'images/clients/client-1.png' %}">
+						<img class="slide__img" src="{% static 'images/slider/clients/client-1.png' %}">
 					</div>
 					<div class="slide">
-						
+						<span class="slide__name">Sarah A</span>
+						<div class="slide__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."<p class="slide__city">-from Santa Monica, CA</p></div>
+						<img class="slide__img" src="{% static 'images/slider/clients/client-2.png' %}">
 					</div>
 					<div class="slide">
-						
+						<span class="slide__name">Sarah A</span>
+						<div class="slide__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."<p class="slide__city">-from Santa Monica, CA</p></div>
+						<img class="slide__img" src="{% static 'images/slider/clients/client-3.png' %}">
 					</div>
 
 					<!-- Arrows  -->

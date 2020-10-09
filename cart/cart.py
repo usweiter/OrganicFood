@@ -12,7 +12,7 @@ class Cart:
 
 	def __iter__(self):
 		product_ids = self.cart.keys()
-		products = Product.objects.filter(id__in=product_ids) #ВОЗМОЖНА ОШИБКА
+		products = Product.objects.filter(id__in=product_ids)
 
 		cart = self.cart.copy() #cart = {0:{...}, 1:{...}, 2:{'price': ,'quantity': ,}}
 		
